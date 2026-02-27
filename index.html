@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMDetailing | Mobile Car Detailing - North County San Diego</title>
+    <meta name="description" content="Professional mobile car detailing services in North County San Diego. Interior deep clean, deluxe detail, premium detail. Serving Carlsbad, Encinitas, Rancho Santa Fe, Del Mar.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            opacity: 0.8;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1200') center/cover;
+            padding: 4rem 1rem;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card.popular {
+            border: 3px solid #e94560;
+            position: relative;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #e94560;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a2e;
+        }
+        .price {
+            font-size: 2rem;
+            color: #e94560;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .service-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .service-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .service-card li::before {
+            content: '✓ ';
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .addons {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        .addons h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .addon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            text-align: center;
+        }
+        .addon-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        .addon-item span {
+            display: block;
+            color: #666;
+        }
+        .addon-item strong {
+            color: #e94560;
+            font-size: 1.2rem;
+        }
+        .contact {
+            background: #1a1a2e;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .contact h2 {
+            margin-bottom: 1rem;
+        }
+        .phone {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e94560;
+            text-decoration: none;
+        }
+        .phone:hover {
+            color: #ff6b6b;
+        }
+        .area {
+            margin-top: 1rem;
+            opacity: 0.8;
+        }
+        footer {
+            background: #0f0f1a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            .hero h2 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚗 NMDetailing</h1>
+        <p>Mobile Car Detailing | North County San Diego</p>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Professional Detailing Comes To You</h2>
+            <p>We come to your home, office, or apartment. No need to go anywhere.</p>
+            <a href="tel:6197824344" class="cta-button">📱 Call Now</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="services">
+            <div class="service-card">
+                <h3>Interior Deep Clean</h3>
+                <div class="price">$60</div>
+                <ul>
+                    <li>Complete vacuum (seats, carpets, trunk)</li>
+                    <li>Deep clean all surfaces</li>
+                    <li>Door jambs detailed</li>
+                    <li>Console & dashboard cleaned</li>
+                </ul>
+            </div>
+
+            <div class="service-card popular">
+                <span class="popular-badge">Most Popular</span>
+                <h3>Deluxe Detail</h3>
+                <div class="price">$90</div>
+                <ul>
+                    <li>Full exterior hand wash</li>
+                    <li>Paint protection applied</li>
+                    <li>Complete interior vacuum</li>
+                    <li>Deep clean all surfaces</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Premium Detail</h3>
+                <div class="price">$150</div>
+                <ul>
+                    <li>Everything in Deluxe</li>
+                    <li>Clay bar treatment</li>
+                    <li>Carpet shampoo</li>
+                    <li>Upholstery shampoo</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="addons">
+            <h3>Build Your Own Package</h3>
+            <p style="text-align:center;margin-bottom:1rem;color:#666;">Add extras to any package</p>
+            <div class="addon-grid">
+                <div class="addon-item">
+                    <strong>+$20</strong>
+                    <span>Clay Bar</span>
+                </div>
+                <div class="addon-item">
+                    <strong>+$20</strong>
+                    <span>Carpet Shampoo</span>
+                </div>
+                <div class="addon-item">
+                    <strong>+$20</strong>
+                    <span>Upholstery Shampoo</span>
+                </div>
+                <div class="addon-item">
+                    <strong>$50</strong>
+                    <span>Bike Detail</span>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align:center;margin: 2rem 0;">
+            <h3>💧 Waterless Detail</h3>
+            <p>Perfect for apartments! No hose needed. Professional results anywhere.</p>
+        </section>
+    </div>
+
+    <section class="contact">
+        <h2>Ready to Book?</h2>
+        <a href="tel:6197824344" class="phone">📱 619-782-4344</a>
+        <p class="area">Serving: Carlsbad, Encinitas, Rancho Santa Fe, Del Mar & Surrounding Areas</p>
+    </section>
+
+    <footer>
+        <p>🚗 NMDetailing | 16-Year-Old Competitive Racer Who Cares About Cars</p>
+        <p>Professional Mobile Car Detailing in North County San Diego</p>
+    </footer>
+</body>
+</html>
