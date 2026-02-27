@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMDetailing | North County San Diego</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --dark: #03132d;
+            --silver: #bec0c4;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.5;
+        }
+        
+        /* Header - Minimal */
+        header {
+            background: var(--dark);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        header img { height: 50px; }
+        
+        header a {
+            color: var(--silver);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        /* Hero - Simple */
+        .hero {
+            background: var(--dark);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero p {
+            color: var(--silver);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero a {
+            display: inline-block;
+            background: var(--silver);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+        
+        /* Services - Clean Cards */
+        .section { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .service {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .service.featured {
+            background: var(--gray);
+            border-color: var(--silver);
+        }
+        
+        .service h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .service .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .service ul {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .service li {
+            padding: 0.3rem 0;
+        }
+        
+        /* Add-ons - Simple */
+        .addons {
+            background: var(--gray);
+            padding: 3rem 2rem;
+        }
+        
+        .addons .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .addons .item {
+            background: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .addons .item strong {
+            color: var(--dark);
+        }
+        
+        /* Gallery - Grid */
+        .gallery .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.5rem;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        /* Contact */
+        .contact {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact a {
+            font-size: 1.8rem;
+            color: var(--silver);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .contact p {
+            color: var(--silver);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--silver);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            header { flex-direction: column; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="NMDetailing">
+        <a href="tel:6197824344">📞 619-782-4344</a>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Interior Deep Clean</h3>
+                <div class="price">$60</div>
+                <ul>
+                    <li>Complete vacuum</li>
+                    <li>Deep clean surfaces</li>
+                    <li>Door jambs</li>
+                    <li>Console & dashboard</li>
+                </ul>
+            </div>
+            <div class="service featured">
+                <h3>Deluxe Detail</h3>
+                <div class="price">$90</div>
+                <ul>
+                    <li>Exterior wash</li>
+                    <li>Paint protection</li>
+                    <li>Interior vacuum</li>
+                    <li>Deep clean</li>
+                </ul>
+            </div>
+            <div class="service">
+                <h3>Premium Detail</h3>
+                <div class="price">$150</div>
+                <ul>
+                    <li>Everything in Deluxe</li>
+                    <li>Clay bar</li>
+                    <li>Carpet shampoo</li>
+                    <li>Upholstery shampoo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="addons">
+        <h2 class="section-title">Add-ons</h2>
+        <div class="grid">
+            <div class="item"><strong>+$20</strong> Clay Bar</div>
+            <div class="item"><strong>+$20</strong> Carpet Shampoo</div>
+            <div class="item"><strong>+$20</strong> Upholstery</div>
+            <div class="item"><strong>$50</strong> Bike Detail</div>
+            <div class="item">Waterless Detail</div>
+        </div>
+    </section>
+
+    <section class="section gallery">
+        <h2 class="section-title">Our Work</h2>
+        <div class="grid">
+            <img src="gallery-1.jpg" alt="">
+            <img src="gallery-2.jpg" alt="">
+            <img src="gallery-3.jpg" alt="">
+            <img src="gallery-4.jpg" alt="">
+            <img src="gallery-5.jpg" alt="">
+            <img src="gallery-6.jpg" alt="">
+            <img src="gallery-7.jpg" alt="">
+            <img src="gallery-8.jpg" alt="">
+            <img src="gallery-9.jpg" alt="">
+            <img src="gallery-10.jpg" alt="">
+            <img src="gallery-11.jpg" alt="">
+            <img src="gallery-12.jpg" alt="">
+            <img src="gallery-13.jpg" alt="">
+            <img src="gallery-14.jpg" alt="">
+            <img src="gallery-15.jpg" alt="">
+            <img src="gallery-16.jpg" alt="">
+            <img src="gallery-17.jpg" alt="">
+            <img src="gallery-18.jpg" alt="">
+            <img src="gallery-19.jpg" alt="">
+            <img src="gallery-20.jpg" alt="">
+            <img src="gallery-21.jpg" alt="">
+            <img src="gallery-22.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Book Now</h2>
+        <a href="tel:6197824344">619-782-4344</a>
+        <p>Carlsbad · Encinitas · Rancho Santa Fe · Del Mar</p>
+    </section>
+
+    <footer>
+        <p>NMDetailing · 16-Year-Old Competitive Racer</p>
+    </footer>
+</body>
+</html>
